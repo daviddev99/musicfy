@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+    font-family: "CircularStd", system-ui, sans-serif;
+}
+
+@font-face {
+    font-family: "CircularStd";
+    src: url("/fonts/CircularStd-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "CircularStd";
+    src: url("/fonts/CircularStd-Book.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "CircularStd";
+    src: url("/fonts/CircularStd-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "CircularStd";
+    src: url("/fonts/CircularStd-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "CircularStd";
+    src: url("/fonts/CircularStd-Black.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+#app{
+    display: grid;
+    grid-template-areas: 
+    "aside main main"
+    "player player player";
+    grid-template-columns: 350px 1fr;
+    grid-template-rows: 1fr auto;
+}
+
+@media (max-width: 1024px) {
+    #app {
+        display: grid;
+        grid-template-areas: 
+        "main main main"
+        "player player player";
+        grid-template-columns: 350px 1fr;
+        grid-template-rows: 1fr auto;
+    }
+
+    #app aside {
+        display: none;
+    }
+}
+
